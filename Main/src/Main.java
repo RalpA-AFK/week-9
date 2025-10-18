@@ -32,7 +32,6 @@ public class Main {
     }
 
     static void checkForThree(SingleyLinkedList original, SingleyLinkedList secondList){
-
         Node current = original.head;
         while(current != null){
             if(Integer.toString(current.value).contains("3")){
@@ -65,6 +64,14 @@ public class Main {
             current = current.next;
 
         }
+
+        current = secondList.head;
+        int primeSum = 0;
+        while(current != null){
+            primeSum += current.value;
+            current = current.next;
+        }
+        System.out.println("The sum of these numbers are " + primeSum);
 
     }
 }
